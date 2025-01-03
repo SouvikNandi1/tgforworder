@@ -70,8 +70,8 @@ def main():
     # Add a handler for channel posts
     for channel_id in CHANNEL_GROUP_MAP.keys():
         application.add_handler(MessageHandler(filters.Chat(channel_id), copy_and_forward_message))
-    for channel_id in CHANNEL_GROUP_MAP_2.keys():
-        application.add_handler(MessageHandler(filters.Chat(channel_id), copy_and_forward_message))
+    # for channel_id in CHANNEL_GROUP_MAP_2.keys():
+    #     application.add_handler(MessageHandler(filters.Chat(channel_id), copy_and_forward_message))
 
     # Start the bot
     print("Bot is running... Press Ctrl+C to stop.")
