@@ -1,28 +1,29 @@
-name: Run Telegram Bot
+name: Continuous Script Run
 
 on:
+  workflow_dispatch:  # Allows manual triggering
   push:
     branches:
-      - main
+      - main  # Run on push to the main branch
 
 jobs:
-  run-bot:
+  run-continuous-script:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Repository
       uses: actions/checkout@v3
 
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.x
+        python-version: "3.9"
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        
 
-    - name: Run bot
-      run: python check.py
+    - name: Run Script
+      run: |
+        nohup python check.py &
