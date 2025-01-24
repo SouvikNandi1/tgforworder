@@ -9,7 +9,8 @@ BOT_TOKEN = '7397423501:AAHxsRXPz8qJssxGf2Yzi_XpbQyq66by45o'
 # Source channel ID and destination group/channel IDs
 CHANNEL_GROUP_MAP = {
     -1001430003499: ["-1001565012822", "-1001234389929"],  # Channel 1 -> Group 1
-    -1002343910094: ["-1002292833112"]
+    -1002343910094: ["-1002292833112"],
+    -1002407553232: ["-1002399639409"]
 }
 
 # Set up logging
